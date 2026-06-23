@@ -1,0 +1,464 @@
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="urdfyong">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.10143 -0.0030755 0.16663"
+        rpy="0 0 0" />
+      <mass
+        value="1.047" />
+      <inertia
+        ixx="0.045109"
+        ixy="0.0020729"
+        ixz="-0.024963"
+        iyy="0.2063"
+        iyz="1.529E-06"
+        izz="0.1701" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfyong/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfyong/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link1">
+    <inertial>
+      <origin
+        xyz="-0.10143 -0.0030755 0.12663"
+        rpy="0 0 0" />
+      <mass
+        value="1.441" />
+      <inertia
+        ixx="0.045109"
+        ixy="0.0020729"
+        ixz="-0.024963"
+        iyy="0.2063"
+        iyz="1.529E-06"
+        izz="0.1701" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfyong/meshes/Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfyong/meshes/Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.967"
+      upper="2.967"
+      effort="11"
+      velocity="2.618" />
+  </joint>
+  <link
+    name="Link2">
+    <inertial>
+      <origin
+        xyz="-0.10143 -0.033176 0.024063"
+        rpy="0 0 0" />
+      <mass
+        value="0.698" />
+      <inertia
+        ixx="0.045109"
+        ixy="0.0020729"
+        ixz="-0.024963"
+        iyy="0.2063"
+        iyz="1.529E-06"
+        izz="0.1701" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfyong/meshes/Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfyong/meshes/Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0 0.0301 0.10257"
+      rpy="0 0 0" />
+    <parent
+      link="Link1" />
+    <child
+      link="Link2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="40"
+      velocity="1.745" />
+  </joint>
+  <link
+    name="Link3">
+    <inertial>
+      <origin
+        xyz="0.24757 -0.033176 -0.052125"
+        rpy="0 0 0" />
+      <mass
+        value="2.107" />
+      <inertia
+        ixx="0.045109"
+        ixy="0.0020729"
+        ixz="-0.024963"
+        iyy="0.2063"
+        iyz="1.529E-06"
+        izz="0.1701" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfyong/meshes/Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfyong/meshes/Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="-0.349 0 0.076188"
+      rpy="0 0 0" />
+    <parent
+      link="Link2" />
+    <child
+      link="Link3" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.618"
+      upper="2.618"
+      effort="40"
+      velocity="1.745" />
+  </joint>
+  <link
+    name="Link4">
+    <inertial>
+      <origin
+        xyz="-0.11405 -0.0030755 -0.083763"
+        rpy="0 0 0" />
+      <mass
+        value="0.39" />
+      <inertia
+        ixx="0.045109"
+        ixy="0.0020729"
+        ixz="-0.024963"
+        iyy="0.2063"
+        iyz="1.529E-06"
+        izz="0.1701" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfyong/meshes/Link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfyong/meshes/Link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="revolute">
+    <origin
+      xyz="0.36162 -0.0301 0.031638"
+      rpy="0 0 0" />
+    <parent
+      link="Link3" />
+    <child
+      link="Link4" />
+    <axis
+      xyz="-0.99619 0 -0.087156" />
+    <limit
+      lower="-2.967"
+      upper="2.967"
+      effort="12.5"
+      velocity="2.094" />
+  </joint>
+  <link
+    name="Link5">
+    <inertial>
+      <origin
+        xyz="-0.14792 -0.028351 -0.086726"
+        rpy="0 0 0" />
+      <mass
+        value="0.41" />
+      <inertia
+        ixx="0.045109"
+        ixy="0.0020729"
+        ixz="-0.024963"
+        iyy="0.2063"
+        iyz="1.529E-06"
+        izz="0.1701" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfyong/meshes/Link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfyong/meshes/Link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="revolute">
+    <origin
+      xyz="0.033871 0.025275 0.0029633"
+      rpy="0 0 0" />
+    <parent
+      link="Link4" />
+    <child
+      link="Link5" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="12.5"
+      velocity="2.094" />
+  </joint>
+  <link
+    name="Link6">
+    <inertial>
+      <origin
+        xyz="0.015 -7.73E-05 -0.0006913"
+        rpy="0 0 0" />
+      <mass
+        value="0.049" />
+      <inertia
+        ixx="2.1683E-05"
+        ixy="-2.6682E-20"
+        ixz="-1.681E-20"
+        iyy="1.2021E-05"
+        iyz="-1.0324E-07"
+        izz="1.2933E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfyong/meshes/Link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.49804 0.49804 0.49804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfyong/meshes/Link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="revolute">
+    <origin
+      xyz="0.0815 -0.0255 0"
+      rpy="0 0 0" />
+    <parent
+      link="Link5" />
+    <child
+      link="Link6" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-2.967"
+      upper="2.967"
+      effort="12.5"
+      velocity="2.094" />
+  </joint>
+
+  <ros2_control name="DmMotorSystem" type="system">
+    <hardware>
+      <plugin>urdfyong_hardware/DmMotorHardware</plugin>
+      <param name="serial_port">/dev/ttyACM0</param>
+      <param name="serial_baud">921600</param>
+    </hardware>
+    <joint name="joint1">
+      <param name="motor_can_id">1</param>
+      <param name="motor_direction">-1</param>
+      <param name="position_min">-12.566</param>
+      <param name="position_max">12.566</param>
+      <param name="velocity_max">2.618</param>
+      <param name="torque_max">11.0</param>
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="joint2">
+      <param name="motor_can_id">2</param>
+      <param name="position_min">-12.566</param>
+      <param name="position_max">12.566</param>
+      <param name="velocity_max">1.745</param>
+      <param name="torque_max">40.0</param>
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="joint3">
+      <param name="motor_can_id">3</param>
+      <param name="position_min">-12.566</param>
+      <param name="position_max">12.566</param>
+      <param name="velocity_max">1.745</param>
+      <param name="torque_max">40.0</param>
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="joint4">
+      <param name="motor_can_id">4</param>
+      <param name="position_min">-12.566</param>
+      <param name="position_max">12.566</param>
+      <param name="velocity_max">2.094</param>
+      <param name="torque_max">12.5</param>
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="joint5">
+      <param name="motor_can_id">5</param>
+      <param name="position_min">-12.566</param>
+      <param name="position_max">12.566</param>
+      <param name="velocity_max">2.094</param>
+      <param name="torque_max">12.5</param>
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="joint6">
+      <param name="motor_can_id">6</param>
+      <param name="position_min">-12.566</param>
+      <param name="position_max">12.566</param>
+      <param name="velocity_max">2.094</param>
+      <param name="torque_max">12.5</param>
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+</robot>

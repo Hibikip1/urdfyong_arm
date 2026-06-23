@@ -1,0 +1,20 @@
+# Build
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+
+# Compiled
+*.o
+*.so
+*.a
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store

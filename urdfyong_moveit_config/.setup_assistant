@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: urdfyong
+    relative_path: urdf/urdfyong.urdf
+  srdf:
+    relative_path: config/urdfyong.srdf
+  package_settings:
+    author_name: hibikip
+    author_email: 18588995616@163.com
+    generated_timestamp: 1781074602

@@ -1,0 +1,11 @@
+<library path="urdfyong_hardware">
+  <class name="urdfyong_hardware/DmMotorHardware"
+         type="urdfyong_hardware::DmMotorHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      Hardware interface for 6-axis robotic arm using DM-series motors
+      (DM4310 / DM8009P) via USB-to-CAN FD adapter.
+      Position-velocity control mode at 1 Mbps CAN.
+    </description>
+  </class>
+</library>

@@ -1,0 +1,22 @@
+# Controller Manager parameters — loaded by the ros2_control_node.
+#
+# Use /** (wildcard) so ALL nodes see these params.  A node-name-
+# scoped top-level key would restrict params to just that node,
+# preventing the JSB (loaded as a sub-node by the CM) from seeing
+# the joint_state_broadcaster.joints parameter.
+/**:
+  ros__parameters:
+    update_rate: 100
+    # JointStateBroadcaster — force joint output order to match the
+    # URDF kinematic chain & MoveIt controller config.  Without the
+    # explicit 'joints' list, the JSB reorders joints at runtime
+    # (likely URDF parse order), which breaks the MoveIt pipeline.
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+      joints:
+        - joint1
+        - joint2
+        - joint3
+        - joint4
+        - joint5
+        - joint6
