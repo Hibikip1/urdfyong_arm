@@ -30,6 +30,14 @@ urdfyong_arm/
 
 ## 在新电脑上部署
 
+如果目标是地瓜派 / D-Robotics RDK X5，请优先参考
+[RDK X5 部署说明](docs/rdk-x5-deployment.md)。仓库提供了面向
+Ubuntu 22.04 + ROS 2 Humble 的一键部署脚本：
+
+```bash
+./scripts/deploy_rdk_x5_humble.sh
+```
+
 ### 1. 克隆仓库
 ```bash
 git clone <本仓库地址>
